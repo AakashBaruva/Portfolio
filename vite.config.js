@@ -1,7 +1,7 @@
 export default {
     root: 'src/',
     publicDir: '../static/',
-    base: '/',
+    base: '/Portfolio',
     server:
     {
         host: true,
