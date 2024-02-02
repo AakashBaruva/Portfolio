@@ -1,5 +1,5 @@
 export default {
-    root: 'src/',
+    root: 'dist/',
     publicDir: '../static/',
     base: '/Portfolio.git',
     server:
