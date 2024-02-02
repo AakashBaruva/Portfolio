@@ -71,7 +71,7 @@ let textMaterials = [];
 const cubeScene = () =>
 {
     const fontLoader = new FontLoader();
-    fontLoader.load('/fonts/helvetiker_regular.typeface.json', (font) => {
+    fontLoader.load('./fonts/helvetiker_regular.typeface.json', (font) => {
         // Create the choice text
         const choiceTextMaterial = new THREE.MeshBasicMaterial({ color: "rgb(255, 255, 255)" });
         const choiceTextGeometry = new TextGeometry("You need to find him!", { font: font, size: 0.5, height: 0.1, curveSegments: 12 });
@@ -133,7 +133,7 @@ const cubeScene = () =>
 cubeScene();
 const redPillText = () => {
     const fontLoader = new FontLoader();
-    fontLoader.load('/fonts/helvetiker_regular.typeface.json', (font) => {
+    fontLoader.load('./fonts/helvetiker_regular.typeface.json', (font) => {
         // Create the choice text
         const choiceTextMaterial = new THREE.MeshBasicMaterial({ color: "rgb(255, 255, 255)" });
         const choiceTextGeometry = new TextGeometry("He is the answer.", { font: font, size: 0.5, height: 0.1, curveSegments: 12 });
@@ -156,7 +156,7 @@ const redPillText = () => {
 const bluePillText = () => {
     const fontLoader = new FontLoader();
     
-    fontLoader.load('/fonts/helvetiker_regular.typeface.json', (font) => {
+    fontLoader.load('./fonts/helvetiker_regular.typeface.json', (font) => {
         // Create the "Wrong choice" text
         const choiceTextMaterial = new THREE.MeshBasicMaterial({ color: "rgb(255, 255, 255)" });
         const choiceTextGeometry = new TextGeometry("Dwight is that you?", { font: font, size: 0.5, height: 0.1, curveSegments: 12 });
@@ -225,7 +225,7 @@ const laptopScene = () =>
     // Models
     const gltfLoader = new GLTFLoader();
     gltfLoader.load(
-        '/models/cyberpunk_laptop/scene.gltf',
+        './models/cyberpunk_laptop/scene.gltf',
         (gltf) => {
             // Traverse the loaded model to find the material by name
             // gltf.scene.traverse((child) => {
@@ -511,7 +511,7 @@ scene.add( capsule2 );
 let correctAnswer = null;
 const aakashText = () => {
     const fontLoader = new FontLoader();
-    fontLoader.load('/fonts/helvetiker_regular.typeface.json', (font) => {
+    fontLoader.load('./fonts/helvetiker_regular.typeface.json', (font) => {
         const choiceTextMaterial = new THREE.MeshBasicMaterial({ color: "rgb(107, 247, 94)" });
         const choiceTextGeometry = new TextGeometry("Aakash Baruva", { font: font, size: 0.6, height: 0.1, curveSegments: 12 });
         choiceTextGeometry.center();
