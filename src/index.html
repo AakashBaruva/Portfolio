@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aakash Baruva Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Trigger Warning & Viewing Recommendation</h2>
+            <p>Please be advised that the following content contains elements that some viewers may find disturbing or triggering. Viewer discretion is advised.</p>
+            <p><strong>Note:</strong> This portfolio is best viewed on larger screen devices for an optimal experience.</p>
+            <p><strong>For Mobile Users:</strong> Please double-click on objects for interactions.</p>
+            <h1>Please close this to start the experience.</h1>
+        </div>
+      </div>
+
+    <canvas class="webgl"></canvas>
+    <script type="module" src="./script.js"></script>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+        window.onload = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
