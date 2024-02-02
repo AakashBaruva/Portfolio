@@ -14,7 +14,7 @@ import Stats from 'stats.js'
 
 // Texture Loader
 const textureLoader = new THREE.TextureLoader()
-const environmentMap = textureLoader.load('/environmentMaps/5.png')
+const environmentMap = textureLoader.load('./environmentMaps/5.png')
 
 var modal = document.getElementById("myModal");
 
@@ -259,10 +259,10 @@ const laptopScene = () =>
             scene.add(gltf.scene);
              
             const iframeGroup = new THREE.Group();
-            iframeGroup.add(new Element('bigger.html', 5.14, 1.4, 1.7, 0, -1.57, -0.17, 0.01, '880px', '730px', 5.71, 4.83, 5.93));
-            iframeGroup.add(new Element('big.html', 5.64, 3.01, -7.85, 0, -1.57, -0.17, 0.01, '390px', '335px', 5.87, 4.5, -6.06));
-            iframeGroup.add(new Element('small.html', 4.977, -0.82, -7.2, 0, -1.57, -0.17, 0.01, '270px', '190px', 5.09, -0.04, -6.01));
-            iframeGroup.add(new Element('smaller.html', 5.72, 4.54, -4.323, 0, -1.57, -0.17, 0.01, '158px', '105px', 0, 0, 0));
+            iframeGroup.add(new Element('./bigger.html', 5.14, 1.4, 1.7, 0, -1.57, -0.17, 0.01, '880px', '730px', 5.71, 4.83, 5.93));
+            iframeGroup.add(new Element('./big.html', 5.64, 3.01, -7.85, 0, -1.57, -0.17, 0.01, '390px', '335px', 5.87, 4.5, -6.06));
+            iframeGroup.add(new Element('./small.html', 4.977, -0.82, -7.2, 0, -1.57, -0.17, 0.01, '270px', '190px', 5.09, -0.04, -6.01));
+            iframeGroup.add(new Element('./smaller.html', 5.72, 4.54, -4.323, 0, -1.57, -0.17, 0.01, '158px', '105px', 0, 0, 0));
             counter = 47;
             scene.add(iframeGroup);
             camera.position.set(-12.2, 7.2, 0); // Adjust camera position as needed
@@ -336,7 +336,6 @@ function Element(id, x, y, z, rx, ry, rz, scale, width, height, px, py, pz) {
     mesh2.rotation.copy(cssObject.rotation);
     mesh2.scale.copy(cssObject.scale);
     mesh2.name = uniqueName;
-    console.log(mesh2)
     // Add occlusion mesh to WebGL scene
     scene.add(mesh2);
 
