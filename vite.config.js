@@ -1,16 +1,16 @@
 export default {
     root: 'src/',
     publicDir: '../static/',
-    base: './Portfolio.git',
+    base: './',
     server:
     {
-        host: true,  
+        host: true,
         open: !('SANDBOX_URL' in process.env || 'CODESANDBOX_HOST' in process.env)
     },
     build:
     {
-        outDir: '../dist',
-        emptyOutDir: true,
-        sourcemap: true
+        outDir: '../dist', 
+        emptyOutDir: true, 
+        sourcemap: true 
     },
 }
